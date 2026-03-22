@@ -17,29 +17,54 @@ const SEND_LEAD_URL = "https://functions.poehali.dev/e460fab0-ca2f-40dc-bb8e-bf3
 
 const workPhotos = [
   {
+    url: "https://cdn.poehali.dev/files/23811275-8201-41b6-852a-5767f7b744c4.jpg",
+    title: "Бронирование капота PPF",
+    desc: "Нанесение полиуретановой плёнки на капот автомобиля",
+  },
+  {
     url: "https://cdn.poehali.dev/files/eab87446-7896-41fd-a983-8e909a50b723.jpg",
-    title: "Подготовка к бронированию",
-    desc: "Нанесение PPF на переднюю часть",
+    title: "Бронирование переднего бампера",
+    desc: "PPF на бампер и зоны риска — защита от сколов",
   },
   {
     url: "https://cdn.poehali.dev/files/33245dad-c821-4a51-96a3-8a4fcd5898ef.jpg",
     title: "Бронирование фар",
-    desc: "PPF-плёнка на фары — защита от сколов",
+    desc: "Защита фар полиуретановой плёнкой",
   },
   {
     url: "https://cdn.poehali.dev/files/a20b58d5-d5fd-41b8-86a4-52425ace3aa8.jpg",
     title: "Бронирование задней оптики",
-    desc: "Защита задних фонарей полиуретановой плёнкой",
+    desc: "PPF на задние фонари — надёжная защита",
   },
   {
     url: "https://cdn.poehali.dev/files/c9dd430e-9caf-412e-8095-7fa690ac09e3.jpg",
-    title: "Оклейка кузова",
-    desc: "Бронирование двери — без пузырей и следов",
+    title: "Бронирование двери",
+    desc: "Оклейка кузова — без пузырей и следов",
   },
   {
     url: "https://cdn.poehali.dev/files/718e1196-f3fe-4a63-a78a-c18d6afeffb5.jpg",
-    title: "Полный кузов PPF",
-    desc: "Полное бронирование автомобиля в студии",
+    title: "Полное бронирование кузова",
+    desc: "Полный кузов под PPF в нашей студии",
+  },
+  {
+    url: "https://cdn.poehali.dev/files/5a9b1cda-f287-446f-b849-c6f4ab214a08.jpg",
+    title: "Шумоизоляция — вибродемпфирование пола",
+    desc: "Devil's Gold — профессиональный материал первого слоя",
+  },
+  {
+    url: "https://cdn.poehali.dev/files/efc78e44-aa0c-46a3-906f-f7830ab2e406.jpg",
+    title: "Шумоизоляция Mercedes GLE",
+    desc: "Полная шумоизоляция салона — пол и боковые стойки",
+  },
+  {
+    url: "https://cdn.poehali.dev/files/ed736ea3-6507-45f3-ab58-d0cc34e56883.jpg",
+    title: "Шумоизоляция багажника",
+    desc: "Comfort Blockshot — многослойная шумоизоляция",
+  },
+  {
+    url: "https://cdn.poehali.dev/files/306d493a-4f7f-45bd-828d-40189682fbbf.jpg",
+    title: "Антихром Honda — до и после",
+    desc: "Оклейка хромированных элементов чёрной плёнкой",
   },
 ]
 

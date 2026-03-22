@@ -108,13 +108,14 @@ export function BentoPricing() {
         <div className="flex flex-col p-3 lg:flex-row">
           <div className="pb-2 lg:w-[40%]">
             <span className="font-mono text-3xl font-semibold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              от 10 000 ₽
+              от 140 000 ₽
             </span>
             <span className="text-gray-300 text-xs font-open-sans-custom block mt-1">полное бронирование кузова</span>
           </div>
           <ul className="text-gray-300 grid gap-2 text-xs lg:w-[60%] font-open-sans-custom">
             {[
               "Полиуретановая плёнка — защита от сколов и реагентов",
+              "Зоны риска (капот, бамперы, крылья) от 60 000 ₽",
               "Бронирование отдельных элементов от 3 000 ₽",
               "Бронирование фар от 5 000 ₽",
               "Бронирование автостёкол от 7 000 ₽",
@@ -169,9 +170,9 @@ export function BentoPricing() {
         priceLabel="от 3 000 ₽"
         priceSuffix=""
         features={[
-          "Покраска хромированных элементов",
-          "Матовый или глянцевый чёрный",
-          "Без снятия деталей",
+          "Оклейка хромированных элементов чёрной плёнкой",
+          "Матовый или глянцевый вид",
+          "Без разбора деталей",
         ]}
         className="lg:col-span-4"
         cta="Записаться"

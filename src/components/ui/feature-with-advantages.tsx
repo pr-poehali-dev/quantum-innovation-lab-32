@@ -67,7 +67,7 @@ function Feature() {
                 <div className="flex flex-col gap-1">
                   <p className="text-white font-open-sans-custom">Антихром</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
-                    Перекрашиваем хромированные элементы под матовый или глянцевый чёрный.
+                    Оклейка хромированных элементов чёрной плёнкой — матовый или глянцевый вид.
                   </p>
                 </div>
               </div>
