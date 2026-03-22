@@ -65,6 +65,15 @@ function Feature() {
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white" strokeWidth={3} />
                 <div className="flex flex-col gap-1">
+                  <p className="text-white font-open-sans-custom">Антихром</p>
+                  <p className="text-gray-300 text-sm font-open-sans-custom">
+                    Перекрашиваем хромированные элементы под матовый или глянцевый чёрный.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row gap-6 items-start col-span-2 lg:col-span-1">
+                <Check className="w-[1.05rem] h-[1.05rem] mt-2 text-white" strokeWidth={3} />
+                <div className="flex flex-col gap-1">
                   <p className="text-white font-open-sans-custom">Установка оборудования</p>
                   <p className="text-gray-300 text-sm font-open-sans-custom">
                     Видеорегистраторы, камеры, парктроники, акустика и мультимедиа.

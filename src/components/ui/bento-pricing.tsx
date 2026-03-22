@@ -165,6 +165,19 @@ export function BentoPricing() {
       />
 
       <PricingCard
+        titleBadge="АНТИХРОМ"
+        priceLabel="от 3 000 ₽"
+        priceSuffix=""
+        features={[
+          "Покраска хромированных элементов",
+          "Матовый или глянцевый чёрный",
+          "Без снятия деталей",
+        ]}
+        className="lg:col-span-4"
+        cta="Записаться"
+      />
+
+      <PricingCard
         titleBadge="УСТАНОВКА ОБОРУДОВАНИЯ"
         priceLabel="от 1 000 ₽"
         priceSuffix=""
@@ -174,7 +187,7 @@ export function BentoPricing() {
           "Акустика и мультимедиа от 2 000 ₽",
           "Навесное оборудование от 1 000 ₽",
         ]}
-        className="lg:col-span-8"
+        className="lg:col-span-4"
         cta="Записаться"
       />
     </div>
