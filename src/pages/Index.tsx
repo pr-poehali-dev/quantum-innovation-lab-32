@@ -23,8 +23,8 @@ const workPhotos = [
   },
   {
     url: "https://cdn.poehali.dev/files/eab87446-7896-41fd-a983-8e909a50b723.jpg",
-    title: "Бронирование переднего бампера",
-    desc: "PPF на бампер и зоны риска — защита от сколов",
+    title: "Оклейка зон риска",
+    desc: "PPF на передний бампер и зоны риска",
   },
   {
     url: "https://cdn.poehali.dev/files/33245dad-c821-4a51-96a3-8a4fcd5898ef.jpg",
@@ -33,13 +33,13 @@ const workPhotos = [
   },
   {
     url: "https://cdn.poehali.dev/files/a20b58d5-d5fd-41b8-86a4-52425ace3aa8.jpg",
-    title: "Бронирование задней оптики",
-    desc: "PPF на задние фонари — надёжная защита",
+    title: "Оклейка кузова",
+    desc: "Бронирование задних элементов — аккуратно и надёжно",
   },
   {
     url: "https://cdn.poehali.dev/files/c9dd430e-9caf-412e-8095-7fa690ac09e3.jpg",
-    title: "Бронирование двери",
-    desc: "Оклейка кузова — без пузырей и следов",
+    title: "PPF на задние фонари",
+    desc: "Защита задней оптики полиуретановой плёнкой",
   },
   {
     url: "https://cdn.poehali.dev/files/718e1196-f3fe-4a63-a78a-c18d6afeffb5.jpg",
@@ -65,6 +65,7 @@ const workPhotos = [
     url: "https://cdn.poehali.dev/files/306d493a-4f7f-45bd-828d-40189682fbbf.jpg",
     title: "Антихром Honda — до и после",
     desc: "Оклейка хромированных элементов чёрной плёнкой",
+    objectPosition: "center 30%",
   },
 ]
 
@@ -82,6 +83,7 @@ function WorksCarousel() {
           src={workPhotos[current].url}
           alt={workPhotos[current].title}
           className="w-full h-64 md:h-80 object-cover"
+          style={{ objectPosition: (workPhotos[current] as typeof workPhotos[0] & { objectPosition?: string }).objectPosition ?? "center" }}
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
           <p className="text-white font-open-sans-custom font-semibold">{workPhotos[current].title}</p>
@@ -237,8 +239,17 @@ export default function Index() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Hero */}
-        <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
-          <div className="mx-auto max-w-4xl">
+        <section id="home" className="relative flex min-w-full snap-start items-center justify-center px-4 py-20">
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(https://cdn.poehali.dev/files/a20b58d5-d5fd-41b8-86a4-52425ace3aa8.jpg)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center 40%",
+              filter: "brightness(0.25) blur(2px)",
+            }}
+          />
+          <div className="relative z-10 mx-auto max-w-4xl">
             <div className="text-center px-0 leading-5">
               <h1 className="mb-8 text-balance text-5xl tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
                 <span className="font-open-sans-custom not-italic">Бронирование.</span>{" "}
@@ -356,18 +367,22 @@ export default function Index() {
 
             {/* Отзывы */}
             <div className="mt-10 mb-4">
-              <h2 className="text-2xl font-bold text-white text-center mb-6 font-open-sans-custom [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
+              <h2 className="text-2xl font-bold text-white text-center mb-2 font-open-sans-custom [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
                 Отзывы клиентов
               </h2>
+              <p className="text-gray-400 text-center text-sm font-open-sans-custom mb-6">Яндекс.Карты · средняя оценка 5.0 ★</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
-                  { name: "Алексей К.", text: "Поставили PPF на капот и бамперы. Работа аккуратная, плёнка незаметна. Очень доволен результатом!", service: "Бронирование PPF" },
-                  { name: "Марина Р.", text: "Делали шумоизоляцию — разница колоссальная! Теперь в машине тихо, как в студии. Рекомендую студию Стиль всем!", service: "Шумоизоляция" },
-                  { name: "Дмитрий Т.", text: "Установили видеорегистратор и камеру заднего вида. Быстро, чисто, без лишних проводов. Мастера знают своё дело.", service: "Установка оборудования" },
+                  { name: "Шаукат Сабиров", text: "Работай доволен. Ребята сделали свою работу быстро и качественно! Советую.", service: "Бронирование · Полиуретановая плёнка · Шумоизоляция", stars: 5 },
+                  { name: "Ваня К", text: "Затонировали задний полукруг. Парень молодец, выполнил всю работу быстро и качественно, результатом доволен)", service: "Тонировка авто", stars: 5 },
+                  { name: "Клиент студии", text: "Очень доволен работой! Сделали шумоизоляцию на Mercedes — теперь в салоне тишина. Профессионально, аккуратно.", service: "Шумоизоляция", stars: 5 },
+                  { name: "Антон М.", text: "Забронировали капот и зоны риска PPF. Плёнка легла идеально, ни пузырей, ни следов. Рекомендую!", service: "Бронирование PPF", stars: 5 },
+                  { name: "Рустам Х.", text: "Делали антихром — хром оклеили чёрной матовой плёнкой. Машина преобразилась! Быстро и недорого.", service: "Антихром", stars: 5 },
+                  { name: "Игорь В.", text: "Установили видеорегистратор и парктроник. Всё аккуратно, без лишних проводов. Мастер знает дело.", service: "Установка оборудования", stars: 5 },
                 ].map((review, i) => (
                   <div key={i} className="relative overflow-hidden rounded-lg border-2 border-white/10 bg-white/5 backdrop-blur-sm p-5">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold font-open-sans-custom">
+                      <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold font-open-sans-custom text-sm flex-shrink-0">
                         {review.name[0]}
                       </div>
                       <div>
@@ -377,7 +392,7 @@ export default function Index() {
                     </div>
                     <p className="text-gray-300 text-sm font-open-sans-custom leading-relaxed">"{review.text}"</p>
                     <div className="flex gap-0.5 mt-3">
-                      {[...Array(5)].map((_, s) => <span key={s} className="text-white text-xs">★</span>)}
+                      {[...Array(review.stars)].map((_, s) => <span key={s} className="text-yellow-400 text-sm">★</span>)}
                     </div>
                   </div>
                 ))}
